@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListSensor" >
+        <activity android:name=".Sensor_Light" >
         </activity>
         <activity
             android:name=".Sensor_Accelerometer"

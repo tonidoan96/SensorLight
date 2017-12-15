@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         btnShowSensor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListSensor.class);
+                Intent intent = new Intent(MainActivity.this, Sensor_Light.class);
                 startActivity(intent);
             }
         });

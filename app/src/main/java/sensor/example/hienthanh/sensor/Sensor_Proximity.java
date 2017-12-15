@@ -20,6 +20,7 @@ public class Sensor_Proximity extends Activity implements SensorEventListener {
         setContentView(R.layout.activity_sensor__proximity);
         txtvShowProximity = (TextView) findViewById(R.id.textViewShowProximity);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        //call type of sensor
         sensorProximity = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         sensorManager.registerListener(this, sensorProximity, SensorManager.SENSOR_DELAY_NORMAL);
 
@@ -27,6 +28,7 @@ public class Sensor_Proximity extends Activity implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
+        //show value of sensor what u choose
         txtvShowProximity.setText(String.valueOf(event.values[0]));
     }
 

@@ -20,12 +20,14 @@ public class Sensor_Accelerometer extends AppCompatActivity implements SensorEve
         setContentView(R.layout.activity_sensor__accelerometer);
         txtvAccelerometer = (TextView) findViewById(R.id.textViewAccelerometer);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        //call type of sensor
         sensorAccelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
+        //show value of sensor what u choose
         float x, y, z;
         x = event.values[0];
         y = event.values[1];
