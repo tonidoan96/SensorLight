@@ -30,7 +30,7 @@ public class Sensor_Accelerometer extends AppCompatActivity implements SensorEve
         x = event.values[0];
         y = event.values[1];
         z = event.values[2];
-        txtvAccelerometer.append("\n" + "Value of X: " + x + "\n" + "Value of Y: " + y + "\n" + "Value of Z: " + z);
+       txtvAccelerometer.append("\n" + "Value of X: " + x + "\n" + "Value of Y: " + y + "\n" + "Value of Z: " + z);
 
     }
 

@@ -17,7 +17,7 @@
         android:layout_alignBottom="@+id/buttonShowListSensor"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="Show List View Sensor "
+        android:text="Show Light"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button

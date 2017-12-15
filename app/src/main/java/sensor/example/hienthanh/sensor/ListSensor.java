@@ -29,33 +29,7 @@ public class ListSensor extends AppCompatActivity {
         setContentView(R.layout.activity_list_sensor);
         txtViewListSensor = (TextView) findViewById(R.id.textViewListSensor);
         SensorManager sensorManager = (SensorManager) this.getSystemService(SENSOR_SERVICE);
-        List<Sensor> sensorList = sensorManager.getSensorList(Sensor.TYPE_ALL);
         StringBuilder stringBuilder = new StringBuilder(2048);
-        stringBuilder.append("The sensor on this device are: \n");
-        for (Sensor sensor : sensorList) {
-            stringBuilder.append(sensor.getName() + "\n");
-            stringBuilder.append("Type: " + sensorType.get(sensor.getType()) + "\n");
-            stringBuilder.append("Vendor: " + sensor.getVendor() + "\n");
-            stringBuilder.append("Version: " + sensor.getVersion() + "\n");
-            try {
-                stringBuilder.append("Min Delay: " + sensor.getMinDelay() + "\n");
-
-            } catch (NoSuchMethodError error) {
-
-            }
-            try {
-                stringBuilder.append("FIFO Max Event Count: " + sensor.getFifoMaxEventCount() + "\n");
-
-            } catch (NoSuchMethodError error) {
-
-            }
-
-            stringBuilder.append("Resolution: " + sensor.getResolution() + "\n");
-            stringBuilder.append("Max Range: " + sensor.getMaximumRange() + "\n");
-            stringBuilder.append("Power: " + sensor.getPower() + "mA\n");
-
-
-        }
         layoutParams = getWindow().getAttributes();
         txtViewListSensor.setText(stringBuilder);
         txtViewLight = (TextView) findViewById(R.id.textViewLight);
